@@ -1,0 +1,31 @@
+<div class="row">
+    <div class="col-sm">
+        <div class="card" style="width: 18rem">
+            <p id="demo"></p>
+            <script>
+                var x = document.getElementById("demo");
+
+                function getLocation() {
+                    if (navigator.geolocation) {
+                        navigator.geolocation.getCurrentPosition(showPosition);
+                    } else {
+                        x.innerHTML = "Geolocation is not supported by this browser.";
+                    }
+                }
+
+                function showPosition(position) {
+                    x.innerHTML =
+                        "<a target='_blank' href=https://www.google.com/maps/@" +
+                        position.coords.latitude +
+                        "," +
+                        position.coords.longitude +
+                        ",50m/data=!3m1!1e3>gMaps</a><br>"
+                    //+ "Lat: " +
+                    //position.coords.latitude +
+                    //" Long: " +
+                    //position.coords.longitude;
+                }
+            </script>
+        </div>
+    </div>
+</div>

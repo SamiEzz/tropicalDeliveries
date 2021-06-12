@@ -1,0 +1,1 @@
+alias restart="echo uwsgi --ini tropicalDeliveries_uwsgi.ini \ ; echo sudo service nginx restart \ "
